@@ -1,12 +1,10 @@
-import Sidebar from "./components/Sidebar";
-import ChatDashboard from "./components/ChatDashboard";
 import "./App.css";
-import Dashboard from "./components/Dashboard";
+import MainDashboard from "./components/MainDashboard";
 
 const App = () => {
   return (
     <div className="app">
-      <Dashboard />
+      <MainDashboard />
     </div>
   );
 };

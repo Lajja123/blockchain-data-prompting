@@ -5,10 +5,12 @@
 }
 
 .message-history {
-  flex: 1;
+  width: 260px;
   padding: 10px;
   border-right: 1px solid #ccc;
   overflow-y: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgba(32, 33, 35, var(--tw-bg-opacity));
 }
 
 .message {
@@ -26,7 +28,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  background-color: #282c34;
   padding: 10px;
+  justify-content: space-between;
+  overflow-y: auto;
 }
 
 input {
@@ -35,21 +40,12 @@ input {
   margin-bottom: 10px;
 }
 
-button {
-  height: 40px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
 .chat-input {
   display: flex;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  padding: 5px;
+  margin: 0 auto;
+  width: 70%;
+  position: relative;
 }
 
 input {
@@ -59,17 +55,86 @@ input {
   border: none;
   outline: none;
   font-size: 16px;
+  background-color: #40414f;
+  border-color: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 button {
   width: 40px;
   height: 40px;
-  background-color: #4caf50;
   color: #fff;
   border: none;
+  top: 5px;
+  background: no-repeat;
+  right: 10px;
+  position: absolute;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.side-menu-button {
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  text-align: start;
+  cursor: pointer;
+}
+.side-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.side-menu-button span {
+  padding-left: 6px;
+  padding-right: 12px;
+}
+.chat-log {
+  text-align: left;
+  color: white;
+}
+.chat-msg-response {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.chat-msg-center {
+  padding: 12px 40px;
+  display: flex;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.chat-avtar {
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.chat-avtar-response {
+  background-color: #0da37f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.chat-msg {
+  padding: 0px 40px;
+}
+.dash-title {
+  text-align: center;
+  color: white;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.common-que-flex {
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  justify-content: space-evenly;
 }
