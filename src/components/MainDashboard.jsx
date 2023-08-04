@@ -65,7 +65,6 @@ const Dashboard = () => {
 
   const handleNewChatClick = () => {
     setShowChatLog(false);
-    // setMessages([]); // Clear the messages when starting a new chat
   };
 
   const isSendButtonDisabled = newMessage === "";
@@ -77,24 +76,27 @@ const Dashboard = () => {
         handleDeleteMessage={handleDeleteMessage}
         handleNewChatClick={handleNewChatClick}
       />
-      <div className="chat-box">
-        {messages.length === 0 || !showChatLog ? ( // Show EmptyComponent if messages array is empty or chat log is hidden
-          <EmptyComponent />
-        ) : (
-          <>
-            <ChatLog messages={messages} />
-          </>
-        )}
-        <div className="chat-input">
-          <input
-            type="text"
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
-            placeholder="Type your message..."
-          />
-          <button onClick={sendMessage} disabled={isSendButtonDisabled}>
-            <img src="./send.png" style={{ width: "20px" }}></img>
-          </button>
+
+      <div className="chat-box-main">
+        <div className="chat-box">
+          {messages.length === 0 || !showChatLog ? (
+            <EmptyComponent />
+          ) : (
+            <>
+              <ChatLog messages={messages} />
+            </>
+          )}
+          <div className="chat-input">
+            <input
+              type="text"
+              value={newMessage}
+              onChange={(e) => setNewMessage(e.target.value)}
+              placeholder="Type your message..."
+            />
+            <button onClick={sendMessage} disabled={isSendButtonDisabled}>
+              <img src="./send.png" style={{ width: "20px" }}></img>
+            </button>
+          </div>
         </div>
       </div>
     </div>

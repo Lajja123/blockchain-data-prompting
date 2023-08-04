@@ -18,7 +18,7 @@ const MessageHistory = ({
         {" "}
         {filteredMessages.map((message) => (
           <div key={message.id} className="message">
-            <span>{message.text}</span>
+            <span className="msg-span">{message.text}</span>
             <span
               className="delete-icon"
               onClick={() => handleDeleteMessage(message.id)}
