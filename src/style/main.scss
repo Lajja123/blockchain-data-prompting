@@ -15,8 +15,10 @@
 
 .message {
   background-color: #f1f1f1;
-  padding: 8px;
   margin-bottom: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .timestamp {
