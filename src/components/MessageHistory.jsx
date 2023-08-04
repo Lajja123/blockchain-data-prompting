@@ -14,17 +14,20 @@ const MessageHistory = ({
       <div className="side-menu-button" onClick={handleNewChatClick}>
         <span>+</span>New Chat
       </div>
-      {filteredMessages.map((message) => (
-        <div key={message.id} className="message">
-          {message.text}
-          <span
-            className="delete-icon"
-            onClick={() => handleDeleteMessage(message.id)}
-          >
-            Delete
-          </span>
-        </div>
-      ))}
+      <div style={{ margin: "40px 0px" }}>
+        {" "}
+        {filteredMessages.map((message) => (
+          <div key={message.id} className="message">
+            <span>{message.text}</span>
+            <span
+              className="delete-icon"
+              onClick={() => handleDeleteMessage(message.id)}
+            >
+              <img src="./delete.png" style={{ width: "20px" }}></img>
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

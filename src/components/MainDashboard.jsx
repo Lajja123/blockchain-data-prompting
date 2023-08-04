@@ -93,14 +93,7 @@ const Dashboard = () => {
             placeholder="Type your message..."
           />
           <button onClick={sendMessage} disabled={isSendButtonDisabled}>
-            <svg
-              version="1.1"
-              id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 495.003 495.003"
-            >
-              {/* SVG content */}
-            </svg>
+            <img src="./send.png" style={{ width: "20px" }}></img>
           </button>
         </div>
       </div>
